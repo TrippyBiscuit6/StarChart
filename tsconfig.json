@@ -23,6 +23,6 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "rootDir": "src/"
+    "rootDir": "src"
   }
 }

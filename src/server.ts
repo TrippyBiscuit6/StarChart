@@ -1,8 +1,9 @@
 import "reflect-metadata";
 import * as Express from "express";
 import { ApolloServer } from "apollo-server-express";
-import { buildSchema } from "type-graphql";
 import * as cors from "cors";
+import { buildSchema } from "type-graphql";
+import { CharacterResolver } from "./resolvers";
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,7 +16,7 @@ const main = async () => {
    * Builds schema from resolvers.
    */
   const schema = await buildSchema({
-    resolvers: [CharacterResolver],
+    resolvers: [CharacterResolver], //needs output of schema
   });
 
   const apolloServer = new ApolloServer({ schema, playground: true });
