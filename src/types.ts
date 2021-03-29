@@ -1,26 +1,28 @@
 import "reflect-metadata";
-import { ObjectType, Field, ID } from "type-graphql";
+import { ObjectType, Field } from "type-graphql";
 
-// Character type.
+/**
+ * Character type.
+ * Everything is string to avoid "unknown" value from breaking everything.
+ */
 @ObjectType({ description: "The character model" })
 export class Character {
-  @Field(() => ID)
-  id: string;
   @Field()
   name: string;
   @Field()
-  height: number;
+  height: string;
   @Field()
-  mass: number;
+  mass: string;
   @Field()
   gender: string;
-  /* @Field()
-  homeworld: Planet; */
+  @Field(() => Planet)
+  homeworld: string;
 }
-
-// Planet type.
-/* @ObjectType({ description: "The planet model" })
+/**
+ * Planet type.
+ */
+@ObjectType({ description: "The planet model" })
 export class Planet {
   @Field()
   name: string;
-} */
+}
