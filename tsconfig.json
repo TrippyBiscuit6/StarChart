@@ -7,6 +7,7 @@
     "outDir": "./dist",
     "moduleResolution": "node",
     "declaration": false,
+    "allowJs": true,
 
     "composite": false,
     "removeComments": true,
@@ -24,5 +25,9 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "rootDir": "src"
-  }
+  },
+  "include": ["./src/*"],
+  "exclude": [
+    "./vendor/**/*" // This is what fixed it!
+  ]
 }

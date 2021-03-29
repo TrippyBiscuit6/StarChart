@@ -2,6 +2,7 @@ import "reflect-metadata";
 import { Resolver, Query, Arg } from "type-graphql";
 import { Character, Planet } from "./types";
 import axios from "axios";
+import * as swapiModule from "./vendor/swapi.js";
 
 @Resolver()
 export class CharacterResolver {
