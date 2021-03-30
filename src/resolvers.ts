@@ -1,24 +1,24 @@
 import "reflect-metadata";
 import { Resolver, Query, Arg } from "type-graphql";
-import { Character, Planet } from "./types";
+import { Person, Planet } from "./types";
 import axios from "axios";
-import * as swapiModule from "./vendor/swapi.js";
+//import { swapi } from "swapi-node";
 
 @Resolver()
 export class CharacterResolver {
-  // All characters.
-  @Query(() => [Character])
-  async getAllCharacters() {
-    const res = await axios.get("https://swapi.dev/api/people/");
-    return res.data;
-  }
-  // Search character by name.
-  @Query(() => Character)
-  async personByName(@Arg("name") name: string) {
+  // List all people per page.
+  @Query(() => [Person])
+  async peoplebyPage(@Arg("pageNumber") pageNumber: number) {
     const res = await axios.get(
-      ` https://swapi.dev/api/people/?search=${name} `
+      `https://swapi.dev/api/people/?page=${pageNumber}`
     );
-    return res.data;
+    return res.data.results; // needs the result added!!!!!
+  }
+  // Search person by name.
+  @Query(() => Person)
+  async personByName(@Arg("name") name: string) {
+    const res = await axios.get(`https://swapi.dev/api/people/?search=${name}`);
+    return res.data.results;
   }
 }
 
@@ -28,6 +28,6 @@ export class PlanetResolver {
   @Query(() => [Planet])
   async planets() {
     const res = await axios.get("https://swapi.dev/api/planets/");
-    return res.data;
+    return res.data.results;
   }
 }
