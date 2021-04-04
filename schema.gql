@@ -21,6 +21,6 @@ type Planet {
 
 type Query {
   peoplebyPage(pageNumber: Float!): [Person!]!
-  personByName(name: String!): Person!
+  personByName(name: String!): [Person!]!
   planets: [Planet!]!
 }

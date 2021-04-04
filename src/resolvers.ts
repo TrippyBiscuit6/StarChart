@@ -15,7 +15,7 @@ export class CharacterResolver {
     return res.data.results; // needs the result added!!!!!
   }
   // Search person by name.
-  @Query(() => Person)
+  @Query(() => [Person])
   async personByName(@Arg("name") name: string) {
     const res = await axios.get(`https://swapi.dev/api/people/?search=${name}`);
     return res.data.results;
