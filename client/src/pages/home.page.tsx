@@ -32,6 +32,14 @@ const Home: React.FC = () => {
   }) => {
     setName(e.target.value);
   };
+  // Set of conditionals that keep indexing within range.
+  if (pageCount < 1) {
+    setPageCount(pageCount + 1);
+  }
+  if (pageCount > 9) {
+    setPageCount(pageCount - 1);
+  }
+
   // Sets conditional render for the home page.
   if (name === "") {
     return (
