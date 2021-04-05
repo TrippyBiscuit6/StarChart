@@ -15,15 +15,9 @@ const App: React.FC = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route path="/info">
-            <Info />
-          </Route>
+          <Route exact path="/home" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/info/:name" component={Info} />
         </Switch>
         <Footer />
       </Router>
