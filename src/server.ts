@@ -17,7 +17,6 @@ const main = async () => {
    */
   const schema = await buildSchema({
     resolvers: [CharacterResolver, PlanetResolver],
-    emitSchemaFile: true, //outputs schema
   });
 
   const apolloServer = new ApolloServer({ schema, playground: true });
