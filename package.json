@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node src/server.ts",
+    "start": "node public/server.js",
     "server": "nodemon --exec ts-node src/server.ts",
     "client": "yarn --cwd ./client start",
     "dev": "concurrently \"yarn run server\" \"yarn run client\""
