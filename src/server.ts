@@ -4,6 +4,7 @@ import { ApolloServer } from "apollo-server-express";
 import * as cors from "cors";
 import { buildSchema } from "type-graphql";
 import { CharacterResolver, PlanetResolver } from "./resolvers";
+import path = require("path");
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,6 +24,12 @@ const main = async () => {
   const app = Express();
   // Allows cross-origin resource sharing.
   app.use(cors());
+
+  app.use(Express.static("public"));
+
+  app.get("*", (_req, res) => {
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
+  });
 
   apolloServer.applyMiddleware({ app });
 
