@@ -20,7 +20,7 @@ type Planet {
 }
 
 type Query {
+  peopleByName(name: String!): [Person!]!
   peoplebyPage(pageNumber: Float!): [Person!]!
-  personByName(name: String!): [Person!]!
   planets: [Planet!]!
 }
