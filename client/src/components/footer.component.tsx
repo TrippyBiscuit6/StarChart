@@ -1,14 +1,19 @@
 import React from "react";
 
 import StyledFooter from "./styles/footer/footer.styles";
+import StyledLink from "./styles/footer/footer-links.style";
 
 const Footer: React.FC = () => {
   return (
     <StyledFooter>
-      <p>Copywrite maybe idunno</p>
+      <p>Copywrite Armin Nel 2021</p>
       <nav>
-        <a href="#">Github</a>
-        <a href="#">Twitter</a>
+        <StyledLink target="_blank" href="https://github.com/TrippyBiscuit6">
+          Github
+        </StyledLink>
+        <StyledLink target="_blank" href="https://twitter.com/lil_We3zy">
+          Twitter
+        </StyledLink>
       </nav>
     </StyledFooter>
   );

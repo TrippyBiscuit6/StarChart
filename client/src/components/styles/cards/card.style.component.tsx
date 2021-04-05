@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 const Card = styled.article`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #282828;
   color: white;
   background: #282828;
   border-radius: 15%;
-  width: 250px;
+  width: 200px;
   height: 100px;
   box-shadow: none;
   border-radius: 8px;

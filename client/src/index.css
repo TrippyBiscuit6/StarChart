@@ -1,5 +1,4 @@
 /*Allows the use of the local starjedi font, nothing else should be added here*/
-
 @font-face {
   font-family: "StarJedi";
   src: local("StarJedi"), url(./fonts/StarJedi.ttf) format("truetype");

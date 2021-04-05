@@ -33,7 +33,7 @@ const Home: React.FC = () => {
     setName(e.target.value);
   };
   // Sets conditional render for the home page.
-  if (name == "") {
+  if (name === "") {
     return (
       <StyledSearchContainer>
         <StyledForm action="/" method="get">

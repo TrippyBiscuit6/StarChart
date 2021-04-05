@@ -1,9 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import { Character } from "../common/interfaces/characters.interface";
 import CardTitle from "./styles/cards/card-title.style.component";
 import StyledText from "./styles/cards/card-text.style.component";
+import StyledLink from "./styles/cards/card-navlink.style";
+import Card from "./styles/cards/card.style.component";
 
 const CharGridItem: React.FC<{ character: Character }> = ({
   character,
@@ -11,13 +12,11 @@ const CharGridItem: React.FC<{ character: Character }> = ({
   character: Character;
 }) => {
   return (
-    <div>
+    <Card>
       <CardTitle>{character.name}</CardTitle>
       <StyledText>{character.gender}</StyledText>
-      <NavLink to={`/info/${character.name}`}>
-        <span>i</span>
-      </NavLink>
-    </div>
+      <StyledLink to={`/info/${character.name}`}>INFO</StyledLink>
+    </Card>
   );
 };
 
