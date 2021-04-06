@@ -6,6 +6,7 @@ const Card = styled.article`
   justify-content: space-between;
   background-color: #282828;
   color: white;
+  cursor: pointer;
   background: #282828;
   border-radius: 15%;
   width: 200px;
@@ -15,6 +16,11 @@ const Card = styled.article`
   padding: 15px;
   margin: 15px;
   box-shadow: 9.91px 9.91px 15px #242424, -9.91px -9.91px 15px #2c2c2c;
+  transition: all 0.5s;
+  &:hover {
+    height: 200px;
+    border: 1px solid gold;
+  }
 `;
 
 export default Card;

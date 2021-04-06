@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const StyledText = styled.p`
-  font-family: "Lexend", sans-serif;
-  letter-spacing: 1px;
-  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 8px 0;
 `;
 
 export default StyledText;

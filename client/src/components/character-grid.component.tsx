@@ -10,15 +10,13 @@ interface CharGridProps {
 
 const CharGrid: React.FC<CharGridProps> = ({ characters }: CharGridProps) => {
   return (
-    <div>
-      <StyledGrid>
-        {characters.map((character) => (
-          <div key={character.name}>
-            <CharGridItem character={character} />
-          </div>
-        ))}
-      </StyledGrid>
-    </div>
+    <StyledGrid>
+      {characters.map((character) => (
+        <div key={character.name}>
+          <CharGridItem character={character} />
+        </div>
+      ))}
+    </StyledGrid>
   );
 };
 

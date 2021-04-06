@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <ListCont>
           <li>
             <StyledLink
-              to="/home"
+              to="/"
               activeStyle={{ color: "gold", borderColor: "gold" }}
             >
               Home

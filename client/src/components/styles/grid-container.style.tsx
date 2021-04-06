@@ -5,9 +5,10 @@ const StyledGrid = styled.article`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   width: 75%;
   margin: 0 auto;
-  padding-top: 16px;
+  padding: 0 16px;
 `;
 
 export default StyledGrid;

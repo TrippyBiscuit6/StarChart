@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 // Component imports
 import CharGrid from "../components/character-grid.component";
+import Footer from "../components/footer.component";
+import Header from "../components/header.component";
 // Style imports
 import Tag from "../components/styles/search.style.component";
 import StyledSearchContainer from "../components/styles/search/search-container.styles";
@@ -44,6 +46,7 @@ const Home: React.FC = () => {
   if (name === "") {
     return (
       <StyledSearchContainer>
+        <Header />
         <StyledForm action="/" method="get">
           <label htmlFor="header-search">
             <Tag className="visually-hidden">Search characters by name</Tag>
@@ -67,15 +70,15 @@ const Home: React.FC = () => {
           </StyledButton>
         </StyledButtonGroup>
 
-        <div>
-          <CharGrid characters={characters || []} />
-        </div>
+        <CharGrid characters={characters || []} />
+        <Footer />
       </StyledSearchContainer>
     );
   }
 
   return (
     <StyledSearchContainer>
+      <Header />
       <StyledForm action="/" method="get">
         <label htmlFor="header-search">
           <Tag className="visually-hidden">Search characters</Tag>
@@ -90,9 +93,8 @@ const Home: React.FC = () => {
         />
       </StyledForm>
 
-      <div>
-        <CharGrid characters={searchedCharacters || []} />
-      </div>
+      <CharGrid characters={searchedCharacters || []} />
+      <Footer />
     </StyledSearchContainer>
   );
 };

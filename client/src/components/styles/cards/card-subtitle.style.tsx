@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const StyledText = styled.p`
+const StyledTextTitle = styled.p`
   font-family: "Lexend", sans-serif;
   letter-spacing: 1px;
-  color: white;
+  color: gold;
 `;
 
-export default StyledText;
+export default StyledTextTitle;
