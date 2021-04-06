@@ -24,6 +24,10 @@ const StyledButton = styled.button`
     border: 1px solid #282828;
     color: #282828;
   }
+  @media (max-width: 768px) {
+    padding: 8px;
+    margin: 16px 0;
+  }
 `;
 
 export default StyledButton;

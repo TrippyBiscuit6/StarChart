@@ -7,6 +7,9 @@ const StyledAbout = styled.section`
   font-size: 16px;
   text-align: center;
   height: 100vh;
+  @media (max-width: 1444px) {
+    padding-bottom: 128px;
+  }
 `;
 
 export default StyledAbout;

@@ -8,6 +8,9 @@ const StyledButtonGroup = styled.div`
   letter-spacing: 1px;
   font-size: 24px;
   color: gold;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export default StyledButtonGroup;
